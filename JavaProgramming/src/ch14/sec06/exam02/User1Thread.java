@@ -1,0 +1,23 @@
+package ch14.sec06.exam02;
+
+public class User1Thread extends Thread {
+	// Field
+	private Calculator calculator;
+	
+	
+	// Constructor
+	public User1Thread() {
+		setName("User1Thread");
+	}
+	
+	
+	// Method
+	public void setCalculator(Calculator calculator) {
+		this.calculator = calculator;
+	}
+	
+	@Override
+	public void run() {
+		calculator.setMemory(100);
+	}
+}
